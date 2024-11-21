@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "e7e60126-4ab9-47fa-8488-261af9dd86d6",
+		"name": "YOUAPP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23660651",
+		"_collection_link": "https://grey-shadow-266751.postman.co/workspace/Team-Workspace~bcbf163a-2b40-4f30-82f4-49dd0006b8df/collection/23660651-e7e60126-4ab9-47fa-8488-261af9dd86d6?action=share&source=collection_link&creator=23660651"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fullname\": \"Alex Max\",\r\n  \"email\": \"alexmax@example.com\",\r\n  \"password\": \"password456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"johndoe@example.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20iLCJpZCI6IjY3M2RkZmJkOGNlZmIxYjhlZTk1NjEwOSIsImlhdCI6MTczMjEwODIzNywiZXhwIjoxNzMyMTExODM3fQ.Gc4G-NjOm6whAACTwQnOZRcnMPOLTTX0YKejxsaTm4c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fullname\": \"John Doe\",\r\n  \"gender\": \"Male\",\r\n  \"birthday\": \"1990-01-01T00:00:00Z\",\r\n  \"horoscope\": \"Capricorn\",\r\n  \"zodiac\": \"Goat\",\r\n  \"height\": 175,\r\n  \"weight\": 70,\r\n  \"account\": \"673ddc8ec0f4611f8fcd9b0c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/profile/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProfile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/profile/673ddfe18cefb1b8ee95610c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile",
+						"673ddfe18cefb1b8ee95610c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutProfile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Alex\",\r\n  \"lastName\": \"Maxwell\",\r\n  \"birthDate\": \"1992-07-16T00:00:00.000Z\",\r\n  \"horoscope\": \"Leo\",\r\n  \"zodiac\": \"Fire\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/profile/673db526e6440508c0f911a5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile",
+						"673db526e6440508c0f911a5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChatSend",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9hY2NvdW50Ijoic29HRmU5S19tSGkwTkRaS0ZGdlk0eWV4eWdvUjRRbXMiLCJlbWFpbCI6Imtha2FzaGlAZ21haWwuY29tIiwicm9sZSI6ImVkdWNhdG9yIiwiaWF0IjoxNzMxODM3Njg0LCJleHAiOjE3MzQ0Mjk2ODR9.bBS3B-NSnREfz3UOFcSwZS36OrF7cWxs6nmozCTSFbI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"senderId\": \"673da8a6100379dde58ae867\",\r\n  \"receiverId\": \"673dab4086a5b1e3e19c64fa\",\r\n  \"message\": \"Hello, how are you?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/chat/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chat",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetChat",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20iLCJpZCI6IjY3M2RhOGE2MTAwMzc5ZGRlNThhZTg2NyIsImlhdCI6MTczMjA5NTYyNCwiZXhwIjoxNzMyMDk5MjI0fQ.P4SkXnOnu_PZQICOC8kkHXT3KXOZmH0pMxxYEgA17gM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/chat/673db4f6e6440508c0f911a1/673db526e6440508c0f911a5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chat",
+						"673db4f6e6440508c0f911a1",
+						"673db526e6440508c0f911a5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
