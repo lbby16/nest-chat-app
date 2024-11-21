@@ -1,6 +1,6 @@
 # Proyek NestJS dengan RabbitMQ
 
-Aplikasi menggunakan **NestJS** untuk mengelola profil pengguna, pengiriman pesan menggunakan **RabbitMQ**, dan penyimpanan data menggunakan **MongoDB**.
+Aplikasi menggunakan **NestJS** untuk mengelola profile pengguna, pengiriman pesan menggunakan **RabbitMQ**, dan penyimpanan data menggunakan **MongoDB**.
 
 ## Fitur Utama
 
