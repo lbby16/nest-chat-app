@@ -22,5 +22,4 @@ Pastikan Anda memiliki alat berikut sebelum menjalankan proyek:
 
 1. **Clone repository**:
    ```bash
-   git clone https://github.com/username/repository-name.git
-   cd repository-name
+   git clone https://github.com/lbby16/nest-chat-app.git
